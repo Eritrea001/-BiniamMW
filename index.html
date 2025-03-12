@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eritrea Rising - Strength in Sovereignty</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Orbitron:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #fff;
+            line-height: 1.0;
+            background: linear-gradient(135deg, #000428, #004e92);
+            background-attachment: fixed;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Orbitron', sans-serif;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        /* Header Styles */
+        header {
+            padding: 10px 0;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(5px);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 3rem;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.6);
+        }
+
+        header .tagline {
+            font-size: 1.5rem;
+            margin: 10px 0;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            text-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+            transition: color 0.3s, text-shadow 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #00ffcc;
+            text-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc;
+        }
+
+        /* Section Backgrounds */
+        .section-bg {
+            background: url('1.gif') no-repeat center center/cover;
+            position: relative;
+            padding: 100px 0;
+        }
+
+        .section-bg::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: 1;
+        }
+
+        .section-bg .container {
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .hero h2 {
+            font-size: 4rem;
+            margin: 0;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.6);
+            animation: glow 2s infinite alternate;
+        }
+
+        .hero p {
+            font-size: 1.8rem;
+            margin: 20px 0;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+            animation: fadeIn 2.5s ease-in-out;
+        }
+
+        .cta-button {
+            background: linear-gradient(135deg, #00ffcc, #0099ff);
+            color: #000;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+            animation: pulse 2s infinite;
+        }
+
+        .cta-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(0, 255, 204, 0.8), 0 0 40px rgba(0, 153, 255, 0.8);
+        }
+
+        /* Animations */
+        @keyframes glow {
+            from { text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.6); }
+            to { text-shadow: 0 0 20px rgba(255, 255, 255, 0.8), 0 0 40px rgba(255, 255, 255, 0.6); }
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Gallery Section */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .gallery-grid img {
+            width: 100%;
+            border-radius: 10px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .gallery-grid img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(0, 255, 204, 0.8), 0 0 40px rgba(0, 153, 255, 0.8);
+        }
+
+        /* Form Styles */
+        .story-form {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        .story-form label {
+            display: block;
+            margin: 15px 0;
+            font-weight: bold;
+            text-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+        }
+
+        .story-form input,
+        .story-form textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-top: 5px;
+            background: rgba(255, 255, 255, 0.1);
+            color: #fff;
+        }
+
+        .story-form textarea {
+            height: 150px;
+            resize: vertical;
+        }
+
+        .story-form button {
+            background: linear-gradient(135deg, #00ffcc, #0099ff);
+            color: #000;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .story-form button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(0, 255, 204, 0.8), 0 0 40px rgba(0, 153, 255, 0.8);
+        }
+
+        /* Footer Styles */
+        footer {
+            background: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            text-align: center;
+            padding: 40px 0;
+            margin-top: 60px;
+            backdrop-filter: blur(10px);
+        }
+
+        footer ul {
+            list-style: none;
+            padding: 0;
+            margin: 10px 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        footer ul li a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s, text-shadow 0.3s;
+        }
+
+        footer ul li a:hover {
+            color: #00ffcc;
+            text-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc;
+        }
+
+        .social-media {
+            margin-top: 20px;
+        }
+
+        .social-media a {
+            color: #fff;
+            font-size: 1.5rem;
+            margin: 0 10px;
+            transition: color 0.3s, text-shadow 0.3s;
+        }
+
+        .social-media a:hover {
+            color: #00ffcc;
+            text-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc;
+        }
+
+        .news-post {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            text-align: left;
+        }
+
+        .news-post h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: #00ffcc;
+        }
+
+        .news-post p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin: 10px 0;
+        }
+
+        .news-post a {
+            color: #00ffcc;
+            text-decoration: none;
+            transition: color 0.3s, text-shadow 0.3s;
+        }
+
+        .news-post a:hover {
+            color: #0099ff;
+            text-shadow: 0 0 10px #0099ff, 0 0 20px #0099ff;
+        }
+
+        .additional-content {
+            margin-top: 40px;
+            text-align: left;
+        }
+
+        .additional-content h3 {
+            font-size: 1.8rem;
+            color: #00ffcc;
+            margin-top: 30px;
+        }
+
+        .additional-content p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin: 15px 0;
+        }
+
+        .additional-content blockquote {
+            font-style: italic;
+            color: #00ffcc;
+            margin: 20px 0;
+            padding-left: 20px;
+            border-left: 4px solid #00ffcc;
+        }
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            header .tagline {
+                font-size: 1.2rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .hero h2 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.2rem;
+            }
+
+            .cta-button {
+                padding: 10px 20px;
+            }
+
+            .gallery-grid {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            }
+
+            .story-form input,
+            .story-form textarea {
+                padding: 8px;
+            }
+
+            .story-form button {
+                padding: 8px 16px;
+            }
+
+            .news-post h3 {
+                font-size: 1.5rem;
+            }
+
+            .news-post p {
+                font-size: 1rem;
+            }
+
+            .additional-content h3 {
+                font-size: 1.5rem;
+            }
+
+            .additional-content p {
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.5rem;
+            }
+
+            header .tagline {
+                font-size: 1rem;
+            }
+
+            .hero h2 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .cta-button {
+                padding: 8px 16px;
+            }
+
+            .gallery-grid {
+                grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            }
+
+            .story-form input,
+            .story-form textarea {
+                padding: 6px;
+            }
+
+            .story-form button {
+                padding: 6px 12px;
+            }
+
+            .news-post h3 {
+                font-size: 1.2rem;
+            }
+
+            .news-post p {
+                font-size: 0.9rem;
+            }
+
+            .additional-content h3 {
+                font-size: 1.2rem;
+            }
+
+            .additional-content p {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <h1>Eritrea Rising</h1>
+            <p class="tagline">Strength in Sovereignty</p>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Eritrea</a></li>
+                    <li><a href="#diaspora">Diaspora Voices</a></li>
+                    <li><a href="#news">News & Updates</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero section-bg">
+        <div class="container">
+            <h2>Eritrea Thrives</h2>
+            <p>Built by resilience, united in purpose.</p>
+            <a href="#about" class="cta-button">Explore Our Story</a>
+        </div>
+    </section>
+
+    <!-- About Eritrea Section -->
+    <section id="about" class="section section-bg">
+        <div class="container">
+            <h2>Our Nation, Our Pride</h2>
+            <p>Brief history of Eritrea’s struggle for independence. Emphasis on sovereignty and self-reliance. Highlight key cities like Asmara and Assab with short descriptions.</p>
+            <blockquote>“The enemy doesn’t like what they see—Eritrea standing tall.” - Inspired by @BiniamMW</blockquote>
+        
+            <!-- Additional Content -->
+            <div class="additional-content">
+                <h3>1. Our Land, Our Fight</h3>
+                <p>Eritrea’s saga is carved in stone—30 years of guerrilla grit against Ethiopia’s chokehold, breaking free in ’91 after a struggle that’d make mountains weep. Italian colonizers, British flip-flops, Ethiopian annexation—none could snuff out the fire. Sovereignty’s our gospel; we don’t bend for nobody. Asmara’s a jewel—quiet streets, colonial echoes, and a vibe that says, “We earned this.” Massawa, the coastal king, sweats history with every salty breeze—ports that once bowed to empires now stand free.</p>
+                <blockquote>“They covet what’s ours, but Eritrea’s spine don’t break.” - Inspired by @BiniamMW</blockquote>
+        
+                <h3>2. Blood and Soil</h3>
+                <p>Eritrea didn’t stumble into freedom—it was forged in trenches, paid with lives, and sealed in ’93 when the world had to nod. Ethiopia’s shadow loomed long, from Haile Selassie’s schemes to the Derg’s bombs, but we outlasted ‘em all. Self-reliance? That’s our creed—dams built, fields tilled, no begging bowls here. Keren’s rugged beauty whispers resilience; its hills saw battles and still bloom. Assab’s shores gleam with promise—our gateway, our pride.</p>
+                <blockquote>“Mess with us, and you’ll bleed for it—Eritrea’s not your playground.” - Inspired by @BiniamMW</blockquote>
+        
+                <h3>3. Unbowed, Unshaken</h3>
+                <p>Eritrea’s tale kicks off with defiance—centuries of outsiders eyeing our turf, from Ottomans to Italians, but we’re still here. The ‘60s sparked the flame; by ’91, we’d torched Ethiopia’s grip and stood tall. No puppet strings, no foreign masters—just us. Asmara’s a living postcard—calm, clean, and fierce in its stillness. Dekemhare’s plains roll out like a promise kept—quiet now, but they’ve seen war’s roar.</p>
+                <blockquote>“Enemies gnash their teeth, but Eritrea’s roots run too deep to pull.” - Inspired by @BiniamMW</blockquote>
+        
+                <h3>4. Steel in Our Veins</h3>
+                <p>Eritrea’s freedom wasn’t gifted—it was ripped from the jaws of empires. Italians built roads, sure, but we built a nation, kicking Ethiopia out in ’91 after a war that chewed up the faint-hearted. Self-reliance runs deep; we don’t kneel for aid or applause. Asmara’s streets hum with quiet defiance—coffee shops and old Fiat taxis rolling past scars of struggle. Adi Keyh, perched high, stares down history—rugged, resolute, a fortress town that bows to no one.</p>
+                <blockquote>“They hate our shine, but Eritrea’s light don’t dim.” - Inspired by @BiniamMW</blockquote>
+        
+                <h3>5. Roots That Break Stone</h3>
+                <p>Eritrea’s been a prize for too long—Romans, Turks, Italians, all drooling over our Red Sea edge. But ’91 flipped the script; we smashed Ethiopia’s chains and dared the world to test us. Sovereignty’s our heartbeat—no puppet regimes here, just a people who farm their own fate. Barentu’s dusty sprawl hides a lion’s soul—trade flows, life thrives, all on our terms. Massawa’s waves crash with a story—once a colonial toy, now our crown.</p>
+                <blockquote>“Step on us, and you’ll feel the thorns—Eritrea stands alone.” - Inspired by @BiniamMW</blockquote>
+        
+                <h3>6. Born in Fire</h3>
+                <p>Eritrea’s anthem is a war cry—30 years of bullets and grit, from the Nakfa trenches to Asmara’s liberation. Ethiopia thought they’d swallow us whole in ’62, but we chewed back, free by ’93. No outsiders dictate our moves; we build, we fight, we thrive. Qohaito’s ancient ruins whisper old strength—stones that outlasted kings. Assab’s docks gleam with sweat and ambition—our sea, our rules.</p>
+                <blockquote>“They squirm at our rise, but Eritrea’s too tough to tame.” - Inspired by @BiniamMW</blockquote>
+            </div>
+        </div>
+    </section>
+
+    <!-- Diaspora Voices Section -->
+    <section id="diaspora" class="section section-bg">
+        <div class="container">
+            <h2>Echoes of Eritrea</h2>
+            <div class="blog-post">
+                <p>“Assab’s beaches aren’t just sand—they’re a symbol of our spirit.” - @BiniamMW</p>
+            </div>
+            <form action="https://formspree.io/f/mqapklyb" method="POST" class="story-form">
+                <h3>Share Your Story</h3>
+                <label>
+                    Your Name:
+                    <input type="text" name="name" required>
+                </label>
+                <label>
+                    Your Email:
+                    <input type="email" name="email" required>
+                </label>
+                <label>
+                    Your Story:
+                    <textarea name="story" placeholder="Share your story..." required></textarea>
+                </label>
+                <button type="submit" class="cta-button">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- News & Updates Section -->
+    <section id="news" class="section section-bg">
+        <div class="container">
+            <h2>What’s Happening in Eritrea</h2>
+
+<!-- Historical Conflicts -->
+<div class="news-post">
+    <h3>1. Eritrean Historical Conflicts</h3>
+    <p>Eritrea's history is marked by significant conflicts that have shaped its national identity:</p>
+    <p>
+        <strong>Eritrean War of Independence (1961–1991):</strong> Eritrea fought a 30-year war against Ethiopian annexation, leading to its de facto independence on May 24, 1991, and de jure independence following a 1993 referendum. 
+        <a href="https://en.wikipedia.org" target="_blank">[Source: Wikipedia]</a>
+    </p>
+    <p>
+        <strong>Eritrean Civil Wars:</strong> Two internal conflicts occurred during the independence struggle. The first (1972–1974) involved clashes between the Eritrean Liberation Front (ELF) and dissident groups, leading to the formation of the Eritrean People's Liberation Front (EPLF). The second (1980–1981) saw the EPLF decisively defeating the ELF, consolidating the liberation movement under its leadership. 
+        <a href="https://en.wikipedia.org" target="_blank">[Source: Wikipedia]</a>
+    </p>
+    <p>
+        <strong>Eritrean–Ethiopian War (1998–2000):</strong> Post-independence, Eritrea and Ethiopia engaged in a border war over disputed territories, notably Badme. The conflict resulted in significant casualties and displacement before a peace agreement was reached in 2000. 
+        <a href="https://en.wikipedia.org" target="_blank">[Source: Wikipedia]</a>
+    </p>
+</div>
+
+<!-- Recent Developments -->
+<div class="news-post">
+    <h3>2. Eritrean Recent Developments</h3>
+    <p>Recent events involving Eritrea include:</p>
+    <p>
+        <strong>Diaspora Tensions:</strong> In September 2023, violent clashes erupted in Tel Aviv between Eritrean government supporters and opponents, leading to over 110 injuries and numerous arrests. The unrest highlighted deep divisions within the Eritrean diaspora. 
+        <a href="https://en.wikipedia.org" target="_blank">[Source: Wikipedia]</a>
+    </p>
+    <p>
+        <strong>International Legal Actions:</strong> In March 2025, Italy's Supreme Court ruled that Eritrean migrants detained on an Italian coast guard ship in 2018 are entitled to compensation, emphasizing legal accountability in migrant treatment. 
+        <a href="https://reuters.com" target="_blank">[Source: Reuters]</a>
+    </p>
+</div>
+
+<!-- Cultural Reflection -->
+<div class="news-post">
+    <h3>3. Eritrean Cultural Reflection</h3>
+    <p>Eritrea's rich cultural tapestry reflects its diverse ethnic composition:</p>
+    <p>
+        <strong>Ethnic Diversity:</strong> Home to nine recognized ethnic groups, Eritrea's culture is a blend of various traditions, languages, and customs, contributing to a unique national identity. 
+        <a href="https://en.wikipedia.org" target="_blank">[Source: Wikipedia]</a>
+    </p>
+    <p>
+        <strong>Artistic Legacy:</strong> The late Ficre Ghebreyesus, an Eritrean-born artist, chef, and activist, created over 800 paintings reflecting themes of displacement and identity. His work gained significant recognition posthumously, including exhibitions at the Venice Biennale and an upcoming solo exhibition in London. 
+        <a href="https://theguardian.com" target="_blank">[Source: The Guardian]</a>
+    </p>
+</div>
+
+<!-- Recent News Links -->
+<div class="news-post">
+    <h3>4. Eritrean Recent News Links</h3>
+    <ul>
+        <li><a href="https://shabait.com/2021/01/02/dimtsi-hafash-voice-of-the-broad-masses-of-eritrea/" target="_blank">Dimtsi Hafash: Voice of the Broad Masses of Eritrea - Shabait (January 2, 2021)</a></li>
+        <li><a href="https://www.dendenmedia.com/" target="_blank">Denden Media - Eritrean News and Media Platform</a></li>
+    </ul>
+</div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="section">
+        <div class="container">
+            <h2>Eritrea in Focus</h2>
+            <div class="gallery-grid">
+                <img src="Eritrean landscape.jpg" alt="Eritrean landscape">
+                <img src="Cultural event.jpg" alt="Cultural event">
+                <img src="Eritrean architecture.jpeg" alt="Eritrean architecture">
+                <img src="Community gathering.jpg" alt="Community gathering">
+                <img src="1.jpg" alt="Eritrean landscape">
+<img src="2.jpg" alt="Cultural event">
+<img src="3.jpg" alt="Eritrean architecture">
+<img src="4.jpg" alt="Community gathering">
+<img src="5.jpg" alt="Traditional Eritrean attire">
+<img src="6.jpg" alt="Eritrean coffee ceremony">
+<img src="7.jpg" alt="Scenic mountains in Eritrea">
+<img src="8.jpg" alt="Eritrean market scene">
+<img src="9.jpg" alt="Historic Eritrean church">
+<img src="10.jpg" alt="Eritrean coastal view">
+<img src="11.jpg" alt="Traditional Eritrean dance">
+<img src="12.jpg" alt="Eritrean street food">
+<img src="13.jpg" alt="Eritrean festival celebration">
+<img src="14.jpg" alt="Modern Eritrean cityscape">
+<img src="15.jpg" alt="Eritrean countryside">
+<img src="16.jpg" alt="Sunset over Asmara">
+<img src="17.jpg" alt="Eritrean desert landscape">
+<img src="18.jpg" alt="Eritrean artisan crafts">
+<img src="19.jpg" alt="Eritrean historical monument">
+<img src="20.jpg" alt="Eritrean music performance">
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section section-bg">
+        <div class="container">
+            <form action="https://formspree.io/f/mqapklyb" method="POST" class="story-form"></form>
+            <h2>Join the Movement</h2>
+            <form action="#" method="post" class="story-form">
+                <label>
+                    Your Name:
+                    <input type="text" name="name" required>
+                </label>
+                <label>
+                    Your Email:
+                    <input type="email" name="email" required>
+                </label>
+                <label>
+                    Your Message:
+                    <textarea name="message" placeholder="Your message..." required></textarea>
+                </label>
+                <button type="submit" class="cta-button">Send</button>
+            </form>
+            <div class="social-media">
+                <a href="https://twitter.com/BiniamMW" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+            </div>
+            <p>Email: <a href="mailto:2024gcom@gmail.com">2024gcom@gmail.com</a></p>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <p>Eritrea Rising © 2025 | Built for the Future</p>
+            <ul>
+                <li><a href="#privacy-policy">Privacy Policy</a></li>
+                <li><a href="#terms-of-use">Terms of Use</a></li>
+                <li><a href="#top">Back to Top</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>
